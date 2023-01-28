@@ -13,3 +13,7 @@ GET     /tutorial                           controllers.HomeController.tutorial(
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
 GET     /todo                       controllers.HomeController.hello()
+
+GET     /getById/:id                controllers.HomeController.getById(id: String)
+
+POST    /todo                       controllers.HomeController.addNewItem()
