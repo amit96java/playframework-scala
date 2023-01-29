@@ -52,6 +52,8 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
 
   def addNewItem() = Action { implicit request =>
     val content = request.body
+    val headers = request.headers.get("Authorization")
+//    println(s"headers is ${headers}")
     println(s"content is ${content}")
     val jsonObject = content.asJson
     val todoListItem: Option[NewTodoListItem] =
