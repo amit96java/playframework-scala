@@ -19,3 +19,8 @@ GET     /todo                       controllers.HomeController.hello()
 GET     /getById/:id                controllers.HomeController.getById(id: String)
 
 POST    /todo                       controllers.HomeController.addNewItem()
+
+GET     /api/ping                   controllers.HomeController.ping()
+
+GET /api/post/:postId           controllers.HomeController.getPost(postId: Int)
+GET /api/post/:postId/comments  controllers.HomeController.getComments(postId: Int)
